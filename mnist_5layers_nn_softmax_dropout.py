@@ -30,7 +30,7 @@ from tensorflow.examples.tutorials.mnist import input_data
 import tensorflow as tf
 
 FLAGS = None
-#FLAGS = "mnist/input_data"
+#FLAGS = "/tmp/tensorflow/mnist/input_data"
 
 #define 5 layers neuro numbers ,the 1st layer is imput shapte 768
 K = 200
@@ -120,9 +120,12 @@ def main(_):
 
   print(sess.run([accuracy,cross_entropy],feed_dict={x:mnist.test.images,
                                                      y_:mnist.test.labels}))
+  sess.close()
 if __name__ == '__main__':
+  
   parser = argparse.ArgumentParser()
   parser.add_argument('--data_dir', type=str, default='/tmp/tensorflow/mnist/input_data',
                       help='Directory for storing input data')
   FLAGS, unparsed = parser.parse_known_args()
   tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)
+  
