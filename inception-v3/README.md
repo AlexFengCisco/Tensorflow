@@ -7,4 +7,4 @@
     wget https://storage.googleapis.com/download.tensorflow.org/models/inception_dec_2015.zip
     unzip tensorflow/examples/lable_image/data/inception_dec_2015.zip
     
-    
+#### Alex Feng ,June 2017

@@ -1,3 +1,8 @@
+'''
+Created on June 20, 2017
+
+@author: AlexFeng
+'''
 import glob
 import os.path
 import random
